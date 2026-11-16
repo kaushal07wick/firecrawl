@@ -1,0 +1,4 @@
+{
+  "install": "NODE_OPTIONS=--max-old-space-size=2048 npm exec --yes --package=pnpm@10.11.0 -- pnpm --dir apps/api install --frozen-lockfile --ignore-scripts",
+  "test": "cd apps/api && NODE_OPTIONS=--max-old-space-size=2048 npm exec --yes --package=pnpm@10.11.0 -- pnpm exec jest --runInBand --runTestsByPath src/lib/__tests__/merge-null-val-objs.test.ts src/lib/__tests__/deduplicate-obs-array.test.ts src/lib/__tests__/transform-array-to-obj.test.ts"
+}
